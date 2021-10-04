@@ -1,4 +1,4 @@
-# Terraform module of  AWS - S3 Bucket for Datalake (versioning and encryption) - Just for learn purpose!!!
+# Terraform module of  AWS - EC2 Security Group - Just for learn purpose!!!
 
 All terraform modules from my repositories is only for learn purpose, so it can be broken, incomplete or not working well!
 
@@ -6,21 +6,13 @@ So if you use that code be careful and you will be at your own!!! Good lucky!!!
 
 Terraform doc: https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 
-# What is an S3 Bucket and your relation to Public Access Block?
-Amazon Simple Storage Service (Amazon S3) is storage for the Internet. It is designed to make web-scale computing easier.
+# What is an EC2 Security Group?
+A security group acts as a virtual firewall for your EC2 instances to control incoming and outgoing traffic. Inbound rules control the incoming traffic to your instance, and outbound rules control the outgoing traffic from your instance. When you launch an instance, you can specify one or more security groups. If you don't specify a security group, Amazon EC2 uses the default security group. You can add rules to each security group that allow traffic to or from its associated instances. You can modify the rules for a security group at any time. New and modified rules are automatically applied to all instances that are associated with the security group. When Amazon EC2 decides whether to allow traffic to reach an instance, it evaluates all of the rules from all of the security groups that are associated with the instance.
 
-Amazon S3 has a simple web services interface that you can use to store and retrieve any amount of data, at any time, from anywhere on the web. It gives any developer access to the same highly scalable, reliable, fast, and inexpensive data storage infrastructure that Amazon uses to run its own global network of web sites. The service aims to maximize benefits of scale and to pass those benefits on to developers.
+Source of information: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html
 
-Source of information: https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html
-
-# And about the Datalake?
-For Data Lakes I recommend that it has versioning (in Amazon S3 is a means of keeping multiple variants of an object in the same bucket) ,encription (ou can set the default encryption behavior for an S3 bucket so that all new objects are encrypted when they are stored in the bucket. The objects are encrypted using server-side encryption with either Amazon S3-managed keys (SSE-S3) or AWS KMS keys stored in AWS Key Management Service (AWS KMS) (SSE-KMS)) and replication (is an elastic, fully managed, low cost feature that replicates objects between buckets. S3 Replication offers the most flexibility and functionality in cloud storage, giving you the controls you need to meet your data sovereignty and other business needs).
-
-Source of information:
-* https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html
-* https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucket-encryption.html
-* https://aws.amazon.com/s3/features/replication/?nc1=h_ls
-
+# And how can I use this in the Datalake?
+Any resources that security group is available you should use, like ec2 instances, rds databases and other services...
 
 # Motivation
 I wrote a lot of codes using terraform modules and for each individual project I had to replicated the modules.
